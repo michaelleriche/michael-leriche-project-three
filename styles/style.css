@@ -227,29 +227,237 @@ textarea {
   width: 80%;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Libre Franklin', sans-serif;
+}
+
+h1 {
   font-weight: bold;
   font-size: 4rem;
+  line-height: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+  margin: 20px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid yellow;
 }
 
 p {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
+  line-height: 1.2rem;
+  margin: 20px 0 40px 0;
+}
+
+h2.random:hover {
+  text-shadow: gold 5px 5px 1px;
+}
+
+.socials p {
+  padding-bottom: 5px;
+  border-bottom: 1px solid yellow;
+}
+
+.header-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  height: 50vh;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.gallery-images {
+  width: 33%;
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
+  min-width: 100px;
+  max-width: 225px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+
+i {
+  font-size: 1.2rem;
+  margin: 0 8px;
 }
 
 .grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  width: 75%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   text-align: center;
 }
 
 img:hover {
-  opacity: 0.5;
+  opacity: 0.9;
+  -webkit-box-shadow: 13px 10px 15px 0px rgba(0, 0, 0, 0.54);
+          box-shadow: 13px 10px 15px 0px rgba(0, 0, 0, 0.54);
+}
+
+.other-functions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+}
+
+footer {
+  margin-top: 40px;
+  padding-bottom: 10px;
+  background-color: black;
+}
+
+.footer-text {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.footer-text p {
+  margin: 0px 0 10px 0;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    width: 90%;
+  }
+}
+
+@media (max-width: 834px) {
+  .header-text {
+    height: 40vh;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 3.7rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  .grid {
+    width: 90%;
+  }
+  .gallery-images {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.3rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    padding-bottom: 5px;
+  }
+  .footer-text {
+    width: 50%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 450px) {
+  .wrapper {
+    width: 90%;
+  }
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 414px) {
+  .wrapper {
+    width: 99%;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 320px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  .gallery-images {
+    width: 45%;
+  }
+  i {
+    font-size: 1.2rem;
+    margin: 0 8px;
+  }
+  .grid {
+    width: 90%;
+  }
 }

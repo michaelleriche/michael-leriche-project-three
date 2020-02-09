@@ -3,18 +3,150 @@
 @import 'fonts';
 @import 'header';
 
+
+.gallery-images {
+    width: 33%;
+}
 img {
-    max-width: 100%;
+    width: 100%;
+    min-width: 100px;
+    max-width: 225px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+i {
+    font-size: 1.2rem;
+    margin:0 8px;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    // grid-gap: 10px;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
     text-align: center;
-  
 }
-img:hover {
-    opacity: 0.5;
 
+img:hover {
+    opacity: 0.9;
+    box-shadow: 13px 10px 15px 0px rgba(0,0,0,0.54);
+
+}
+.other-functions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+footer {
+    margin-top: 40px;
+    padding-bottom: 10px;
+    background-color: black;
+}
+.footer-text {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.footer-text p {
+    margin: 0px 0 10px 0;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: baseline;
+}
+
+//                               MEDIA QUERIES 
+
+    @media(max-width: 1200px) {
+        .grid {
+            width: 90%;
+        }
+    }
+
+//IPAD PRO
+    @media (max-width: 834px) {
+        
+        .header-text {
+            height: 40vh;
+        }
+        h1 {
+            font-size: 3rem;
+            line-height: 3.7rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        .grid {
+            width: 90%;
+        }
+        .gallery-images {
+            width: 30%;
+        }
+    }
+//                                        STANDARD IPAD
+    @media(max-width: 768px) {
+        
+        h3 {
+            font-size: 1.3rem;
+        }
+        h4 {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            padding-bottom: 5px;
+        }
+        .footer-text {
+            width: 50%;
+            text-align: left;
+        }
+    // GENERAL MOBILE
+    @media (max-width:450px) {
+        
+        .wrapper {
+            width: 90%;
+        }
+        h1 {
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+    }
+// iPHONE BIG
+
+    @media(max-width: 414px) {
+        
+        .wrapper {
+            width: 99%;
+        }
+    }
+// iPHONE TINY GUY
+    @media(max-width: 320px) {
+        
+        h1 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        } 
+        h3 {
+            font-size: 1rem;
+        }
+        .gallery-images {
+            width: 45%;
+        }
+        i {
+            font-size: 1.2rem;
+            margin:0 8px;
+        }
+        .grid {
+            width: 90%;
+        }
+    }
 }

@@ -1,11 +1,37 @@
-h1 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Libre Franklin', sans-serif;
+}
+h1 {
     font-weight: bold;
     font-size: 4rem;
+    line-height: 5rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h4 {
+    font-size: 1.4rem;
+    margin: 20px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid yellow;
 }
 p { 
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
-
+    line-height: 1.2rem;
+    margin: 20px 0 40px 0;
 }
-
+h2.random:hover {
+    text-shadow:gold 5px 5px 1px;
+    
+}
+.socials p {
+    padding-bottom: 5px;
+    border-bottom: 1px solid yellow;
+}
