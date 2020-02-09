@@ -17,7 +17,10 @@ img {
 }
 i {
     font-size: 1.2rem;
-    margin:0 8px;
+    margin:0 10px;
+}
+i:first-child{
+    margin-left: 20px;
 }
 
 .grid {
@@ -57,10 +60,13 @@ footer {
     margin: 0px 0 10px 0;
 }
 .socials {
+   
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-content: baseline;
+    
 }
 
 //                               MEDIA QUERIES 
@@ -106,7 +112,7 @@ footer {
             padding-bottom: 5px;
         }
         .footer-text {
-            width: 50%;
+            width: 80%;
             text-align: left;
         }
     // GENERAL MOBILE
