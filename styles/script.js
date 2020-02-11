@@ -20,42 +20,47 @@ $(document).ready(function(){
 // const audioArray = [larry1, larry2, larry3, larry4, larry5, larry6, larry7, larry8, larry9];
 
 const $audio = $('audio');
-// const randomizer = Math.floor(Math.random() * 10);
-// console.log(randomizer);
+
+audioArray = [$audio[0], $audio[1], $audio[2], $audio[3], $audio[4], $audio[5], $audio[6], $audio[7], $audio[8]];
+
+console.log(audioArray);
+
 
 $('.larry-1').on('click', function() {
-    $audio[0].play()
-});
+    audioArray[0].play();
+    if (audioArray[0].play() === true) {
+        console.log('playing');
+    }
+})
+
 $('.larry-2').on('click', function(){
-    $audio[1].play();
+    audioArray[1].play();
 })
 $('.larry-3').on('click', function(){
-    $audio[2].play();
+    audioArray[2].play();
 })
 $('.larry-4').on('click', function(){
-    $audio[3].play();
+    audioArray[3].play();
 })
 $('.larry-5').on('click', function(){
-    $audio[4].play();
+    audioArray[4].play();
 })
 $('.larry-6').on('click', function(){
-    $audio[5].play();
+    audioArray[5].play();
 })
 $('.larry-7').on('click', function(){
-    $audio[6].play();
+    audioArray[6].play();
 })
 $('.larry-8').on('click', function(){
-    $audio[7].play();
+    audioArray[7].play();
 })
 $('.larry-9').on('click', function(){
-    $audio[8].play();
+    audioArray[8].play();
 })
 
 $(".other-headers").on("click", function(event){
     event.preventDefault()
 });
-
-
 
 $(".random").on('click', function() {
     let randomizer = Math.floor(Math.random() * 10);
