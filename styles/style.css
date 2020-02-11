@@ -274,13 +274,28 @@ p {
   margin: 20px 0 40px 0;
 }
 
-h2.random:hover {
+.recently-played p {
+  padding-top: 10px;
+}
+
+.recently-played a,
+.other-functions a {
+  text-decoration: none;
+  color: black;
+}
+
+h2.other-headers:hover {
   text-shadow: gold 5px 5px 1px;
 }
 
 .socials p {
   padding-bottom: 5px;
-  border-bottom: 1px solid yellow;
+  border-bottom: 1px solid gold;
+}
+
+em {
+  font-weight: 900;
+  border-bottom: 1px solid gold;
 }
 
 .header-text {
@@ -304,6 +319,10 @@ h2.random:hover {
 
 .gallery-images {
   width: 33%;
+}
+
+audio {
+  display: none;
 }
 
 img {
@@ -346,6 +365,10 @@ img:hover {
           box-shadow: 13px 10px 15px 0px rgba(0, 0, 0, 0.54);
 }
 
+.recently-played {
+  padding: 30px 0;
+}
+
 .other-functions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -357,6 +380,11 @@ img:hover {
       -ms-flex-align: center;
           align-items: center;
   height: 10vh;
+}
+
+.recently-played {
+  margin: 50px 0;
+  text-align: center;
 }
 
 footer {
