@@ -1,63 +1,57 @@
 
 
 $(document).ready(function(){
-	
-
-//create variables that holds each audio file individually (using id)
-   
-    // const larry1 = $("#larry-1");
-    // const larry2 = $("#larry-2");
-    // const larry3 = $("#larry-3");
-    // const larry4 = $("#larry-4");
-    // const larry5 = $("#larry-5");
-    // const larry6 = $("#larry-6");
-    // const larry7 = $("#larry-7");
-    // const larry8 = $("#larry-8");
-    // const larry9 = $("#larry-9");
- 
-
- // store all the variables in an array
-// const audioArray = [larry1, larry2, larry3, larry4, larry5, larry6, larry7, larry8, larry9];
-
 const $audio = $('audio');
+
+
+
+// store 9 larry david quotes in an array. on clicking an image, trigger the associated quote to play
 
 audioArray = [$audio[0], $audio[1], $audio[2], $audio[3], $audio[4], $audio[5], $audio[6], $audio[7], $audio[8]];
 
-console.log(audioArray);
-
-
 $('.larry-1').on('click', function() {
     audioArray[0].play();
-    if (audioArray[0].play() === true) {
-        console.log('playing');
-    }
+    sequenceClick.push(audioArray[0]);
 })
-
 $('.larry-2').on('click', function(){
     audioArray[1].play();
+    sequenceClick.push(audioArray[1]);
 })
 $('.larry-3').on('click', function(){
     audioArray[2].play();
+    sequenceClick.push(audioArray[2]);
 })
 $('.larry-4').on('click', function(){
     audioArray[3].play();
+    sequenceClick.push(audioArray[3]);
 })
 $('.larry-5').on('click', function(){
     audioArray[4].play();
+    sequenceClick.push(audioArray[4]);
 })
 $('.larry-6').on('click', function(){
     audioArray[5].play();
+    sequenceClick.push(audioArray[5]);
 })
 $('.larry-7').on('click', function(){
     audioArray[6].play();
+    sequenceClick.push(audioArray[6]);
 })
 $('.larry-8').on('click', function(){
     audioArray[7].play();
+    sequenceClick.push(audioArray[7]);
 })
 $('.larry-9').on('click', function(){
     audioArray[8].play();
+    sequenceClick.push(audioArray[8]);
 })
 
+
+
+
+/// generate a random number between 0 and 9. using that number, pick a random audio quote to trigger.
+
+// prevent default behavior of an 'a tag' first
 $(".other-headers").on("click", function(event){
     event.preventDefault()
 });
@@ -86,8 +80,25 @@ $(".random").on('click', function() {
 });
 
 
+// store the last 5 played audio clips in an array. when 'replay' h2 is clicked, play back the last 5 audio clips in order, one after the other
 
+const sequenceClick = [];
 
+$(".replay").on('click', function(){
+    sequenceClick[0].play();
+    sequenceClick[0].onended = function () {
+        sequenceClick[1].play();
+    }
+    sequenceClick[1].onended = function() {
+        sequenceClick[2].play();
+    }
+    sequenceClick[2].onended = function() {
+        sequenceClick[3].play();
+    }
+    sequenceClick[3].onended = function() {
+        sequenceClick[4].play();
+    }
+})
 
 
 
