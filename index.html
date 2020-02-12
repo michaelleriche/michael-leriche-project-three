@@ -10,78 +10,84 @@
 </head>
 <body>
     <header class="wrapper">
-        <div class="header-text">
+        <div class="header-text" tabindex="0">
             <h1>Larry David's Pretty, Pretty, Pretty Good Soundboard</h1>
             <h3 class="h3-border-bottom">Want a classic Larry-ism? Click a Larry!</h3>
         </div> 
     </header>   
     <main class="wrapper">
         <div class="grid">
-            <div class="gallery-images">
+            <div class="gallery-images" tabindex="1">
                 <audio src="larryisms/pretty-pretty-good.mp3" type="audio/mpeg" class="audio" id="audio larry-1"></audio>    
                 <img src="assets/larry-crop-1.png"  class="responsive larry-1" alt="Larry David looks confused" title="Larry David looks confused">
                 <p>"Pretty, pretty, pretty good!"</p>
             </div>
-            <div class="gallery-images">
+            <div class="gallery-images" tabindex="2">
                 <audio src="larryisms/respect-wood.mp3" type="audio/mpeg" id="larry-2"></audio> 
                 <img src="assets/larry-crop-2.png" class="responsive larry-2" alt="Larry David with funny sunburn" title="Larry David with funny sunburn.">
                 <p>"Do you respect wood?"</p>
             </div>
-            <div class="gallery-images">
+            <div class="gallery-images" tabindex="3">
                 <audio src="larryisms/chat-cut-2.mp3" type="audio/mpeg" id="larry-3"></audio> 
                 <img src="assets/larry-crop-3.png" class="responsive larry-3" alt="Larry David dressed up like Roman God" title="Larry David dressed up like a Roman God">
                 <p>"...I invented the chat and cut."</p>
             </div>
-            <div class="gallery-images">
+            <div class="gallery-images" tabindex="4">
                 <audio src="larryisms/felt-ripped-off.mp3" type="audio/mpeg" id="larry-4"></audio> 
                 <img src="assets/larry-crop-4.png"  class="responsive larry-4" alt="Larry David looking bored" title="Larry David looking bored">
                 <p>"...I felt a little ripped off."</p>
             </div>
-            <div class="gallery-images">
+            <div class="gallery-images" tabindex="5">
                 <audio src="larryisms/patient-doctor.mp3" type="audio/mpeg" id="larry-5"></audio> 
                 <img src="assets/larry-crop-5.png"  class="responsive larry-5" alt="Larry David squinting" title="Larry David squinting">
                 <p>"There's no such thing as patient/doctor confidentiality."</p>
             </div>
-            <div class="gallery-images">
+            <div class="gallery-images" tabindex="6">
                 <audio src="larryisms/stop-chat.mp3" type="audio/mpeg" id="larry-6"></audio> 
                 <img src="assets/larry-crop-6.png"  class="responsive larry-6" alt="Larry David looking defeated" title="Larry David looking defeated">
                 <p>"He wanted to stop and chat..."</p>
             </div>
-            <div class="gallery-images">
+            <div class="gallery-images" tabindex="7">
                 <audio src="larryisms/you-wanna-stab.mp3" type="audio/mpeg" id="larry-7"></audio> 
                 <img src="assets/larry-crop-12.png"  class="responsive larry-7" alt="Larry David rides the subway" title="Larry on the subway">
                 <p>"...you wanna stab do you not?"</p>
             </div>
-            <div class="gallery-images">
+            <div class="gallery-images" tabindex="8">
                 <audio src="larryisms/your-chair.mp3" type="audio/mpeg" id="larry-8"></audio> 
                 <img src="assets/larry-crop-8.png"  class="responsive larry-8" alt="Larry David pointing angrily" title="Larry David pointing angrily">
                 <p>"This is not a comfortable chair."</p>
             </div>
-            <div class="gallery-images">
+            <div class="gallery-images" tabindex="9">
                 <audio src="larryisms/theme.mp3" type="audio/mpeg" id="larry-9"></audio> 
                 <img src="assets/larry-crop-9.png"  class="responsive larry-9" alt="Larry David smiling" title="Larry David smiling">
                 <p>*Curb Theme*</p>
             </div>
         </div>
-        <section class="recently-played">
+        <section class="recently-played" tabindex="10">
             <a href=""><h2 class="other-headers replay">Replay!</h2></a>
-            <p>Old age got you slipping? Can't remember the last few Larry-isms you listened to? <em>We gotchu</em></p>
+            <p>Old age got you slipping? Can't remember the last five Larry-isms you listened to? <em>We gotchu</em></p>
+            <p>Hit 'Replay' to listen to them back in sequential order!</p>
+            <div class="recently-played-section">
+                <h4>Recently played...</h4>
+            </div>    
+            <div class="insert-here"></div>
+            
         </section>
-        <section class="other-functions">
+        <section class="other-functions" tabindex="11">
             <a href=""><h2 class="other-headers random">Randomize!</h2></a>
         </section>
     </main>
     <footer>
-        <div class="footer-text wrapper">
+        <div class="footer-text wrapper" tabindex="12">
             <h4>Disclaimer</h4>
             <p>Made by a loving fan as an homage to a living legend. I in no way made any money doing this.</p>
             <p>All quotes taken from Curb Your Enthusiasm &copy; 2020 Home Box Office, Inc.</p>
             <div class="socials">
                 <p>Coded by M. le Riche</p>
                 <div class="social-icons">
-                    <a href="http://www.instagram.com/michaelleriche" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:mikeleriche@gmail.com"><i class="far fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/michael-le-riche-147b361a0/" target="_blank"><i class="fab fa-linkedin-in"></i></a>   
+                    <a href="http://www.instagram.com/michaelleriche" target="_blank" ><i class="icon fab fa-instagram" tabindex="13"></i></a>
+                    <a href="mailto:mikeleriche@gmail.com"><i class="icon far fa-envelope" tabindex="14"></i></a>
+                    <a href="https://www.linkedin.com/in/michael-le-riche-147b361a0/" target="_blank"><i class=" icon fab fa-linkedin-in" tabindex="15"></i></a>   
                 </div>    
             </div>
         </div>
