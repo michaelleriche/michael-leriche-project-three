@@ -45,6 +45,16 @@ img:hover {
     justify-content: center;
     align-items: center;
 } 
+.header-text, 
+.gallery-images, 
+.other-functions, 
+.recently-played {    
+    border:white solid 2px;
+} 
+.footer-text,
+.icon {
+    border: black solid 2px;
+}
 .header-text:focus, 
 .gallery-images:focus, 
 .other-functions:focus, 
@@ -53,6 +63,10 @@ img:hover {
 .icon:focus {    
     border:gold solid 2px;
 } 
+body:not(.focus-outline) [tabindex]:focus {
+    border: white solid 2px;
+    outline: none;
+  }
 .other-functions {
     height: 10vh;
 }
@@ -101,8 +115,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-content: baseline;
-}
-
+} 
 
 //                               MEDIA QUERIES 
 

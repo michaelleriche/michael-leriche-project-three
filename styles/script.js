@@ -1,6 +1,26 @@
 
 
 $(document).ready(function(){
+
+
+    //accessibility features. tab through enables focus state, click through deactivates focus 
+
+    document.addEventListener('keydown', function(tab) {
+        if (tab.keyCode === 9) {
+          $('body').addClass('focus-outline');
+        }
+      });
+      
+      document.addEventListener('click', function() {
+        $('body').removeClass('focus-outline');
+      });
+
+      
+      document.addEventListener('keydown', function(enter){
+        if (enter.keyCode === 13) {
+        }
+    }) 
+      
     // store 9 larry david quotes in an array. on clicking an image, trigger the associated quote to play
     
     const $audio = $('audio');
@@ -28,9 +48,6 @@ $(document).ready(function(){
             // }
         });
     }
-
-
-
 // prevent default behavior of an 'a tag' first
     $(".other-headers").on("click", function(event){
         event.preventDefault()
@@ -65,12 +82,41 @@ $(document).ready(function(){
         }
     });
 
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
+
+
+
+
 
 
 // TO DO
 // max seq length
-// fix tab through / click through accessibility 
+// enter key as click function
 // if sequence array = 0, replay function alert 'haven't played anything yet!'
 
 
