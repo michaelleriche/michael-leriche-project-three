@@ -385,7 +385,7 @@ img:hover {
 .recently-played:focus,
 .footer-text:focus,
 .icon:focus {
-  outline: gold solid 2px;
+  border: gold solid 2px;
 }
 
 .other-functions {

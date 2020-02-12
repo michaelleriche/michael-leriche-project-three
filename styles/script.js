@@ -22,11 +22,12 @@ $(document).ready(function(){
             audioArray[i - 1].play();
             sequence.push(audioArray[i - 1]);
             const htmlToAppend = `<img src="assets/larry-crop-${i}.png" </img>`;
-    $('.insert-here').append(htmlToAppend);
+            $('.insert-here').append(htmlToAppend);
+            // if (sequence.length >= 6) {
+            //    $('.insert-here').empty();
+            // }
         });
     }
-    // const htmlToAppend = `<div>.larry=${i}</div>`;
-    // $('.insert-here').append(htmlToAppend);
 
 
 
@@ -47,6 +48,12 @@ $(document).ready(function(){
 
     const sequence = [];
 
+    // trying to figure out max seq length
+    if (sequence.length > 5) {
+        numbers.length = 5;
+      }
+     
+
     $('.replay').on('click', function() {
         for (let i = 0; i < sequence.length; i++) {
             sequence[0].play();
@@ -57,7 +64,14 @@ $(document).ready(function(){
             }
         }
     });
+
 });
+
+
+// TO DO
+// max seq length
+// fix tab through / click through accessibility 
+// if sequence array = 0, replay function alert 'haven't played anything yet!'
 
 
 
