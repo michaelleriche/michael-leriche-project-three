@@ -470,6 +470,13 @@ button.clear {
   margin: 40px 0;
 }
 
+button.clear:focus {
+  -webkit-box-shadow: 8px 8px black;
+          box-shadow: 8px 8px black;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
 button.clear:hover {
   -webkit-box-shadow: 8px 8px black;
           box-shadow: 8px 8px black;

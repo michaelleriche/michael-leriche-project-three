@@ -61,11 +61,35 @@ $(document).ready(function(){
     });
 
     let sequence = [];
+////////works except for erase array!!!!
+
+    // $('.replay').on('click', function(){
+    //     for (let i = 0; i < sequence.length; i++) {
+    //         sequence[0].play();
+    //         if (i === i) {
+    //             sequence[i].onended = function() {
+    //                 if(sequence[i + 1] === undefined || sequence[i + 1] === null) {
+    //                     return false;
+    //                 } else {
+    //                     return sequence[i + 1].play();
+    //                 }
+    //             }
+    //         } else if (sequence.length % 6 === 0) {
+    //             $(sequence).empty();
+    //         }
+    //     }
+    // });
+
+
+
+// ON LUNCH CHECK IF THIS ERASES THE ARRAY
 
     $('.replay').on('click', function(){
         for (let i = 0; i < sequence.length; i++) {
             sequence[0].play();
-            if (i === i) {
+            if (sequence.length % 6 === 0) {
+                $(sequence).empty();
+            } else if (i === i) {
                 sequence[i].onended = function() {
                     if(sequence[i + 1] === undefined || sequence[i + 1] === null) {
                         return false;
@@ -76,6 +100,9 @@ $(document).ready(function(){
             } 
         }
     });
+
+
+
 
     $('.clear').on('click', function(){
         sequence.length = [];
@@ -91,6 +118,7 @@ $(document).ready(function(){
 // TO DO
 // max seq length
 // if sequence array = 0, replay function alert 'haven't played anything yet!'
+// accessibility - tab through hit enter on replay and randomize
 
 
 
