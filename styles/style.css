@@ -230,7 +230,8 @@ textarea {
 h1,
 h2,
 h3,
-h4 {
+h4,
+button {
   font-family: 'Libre Franklin', sans-serif;
 }
 
@@ -326,6 +327,16 @@ audio {
   display: none;
 }
 
+button {
+  background-color: white;
+  border: none;
+  border: white solid 2px;
+}
+
+button:focus {
+  border: gold solid 2px;
+}
+
 img {
   width: 100%;
   min-width: 100px;
@@ -417,8 +428,6 @@ body:not(.focus-outline) [tabindex]:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 50px 0;
-  padding: 30px 0;
 }
 
 .recently-played-section {
@@ -438,9 +447,41 @@ body:not(.focus-outline) [tabindex]:focus {
 }
 
 .insert-here {
-  margin-top: 0px;
-  padding-top: 40px;
-  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20px;
+}
+
+button.clear {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  border: gold solid 2px;
+  border-radius: 5px;
+  background: gold;
+  padding: 15px 40px;
+  margin: 40px 0;
+}
+
+button.clear:hover {
+  -webkit-box-shadow: 8px 8px black;
+          box-shadow: 8px 8px black;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+button.clear:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .insert-here img {

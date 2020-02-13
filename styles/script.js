@@ -16,10 +16,10 @@ $(document).ready(function(){
       });
 
       
-      document.addEventListener('keydown', function(enter){
-        if (enter.keyCode === 13) {
-        }
-    }) 
+    //   document.addEventListener('keydown', function(enter){
+    //     if (enter.keyCode === 13) {
+    //     }
+    // }) 
       
     // store 9 larry david quotes in an array. on clicking an image, trigger the associated quote to play
     
@@ -43,11 +43,12 @@ $(document).ready(function(){
             sequence.push(audioArray[i - 1]);
             const htmlToAppend = `<img src="assets/larry-crop-${i}.png" </img>`;
             $('.insert-here').append(htmlToAppend);
-            // if (sequence.length >= 6) {
-            //    $('.insert-here').empty();
-            // }
+            if (sequence.length % 6 === 0) {
+               $('.insert-here').empty();
+            }
         });
     }
+    
 // prevent default behavior of an 'a tag' first
     $(".other-headers").on("click", function(event){
         event.preventDefault()
@@ -59,54 +60,27 @@ $(document).ready(function(){
         $audio[random].play();
     });
 
-// store the last 5 played audio clips in an array. when 'replay' h2 is clicked, play back the last 5 audio clips in order, one after the other
+    let sequence = [];
 
-
-
-    const sequence = [];
-
-    // trying to figure out max seq length
-    if (sequence.length > 5) {
-        numbers.length = 5;
-      }
-     
-
-    $('.replay').on('click', function() {
+    $('.replay').on('click', function(){
         for (let i = 0; i < sequence.length; i++) {
             sequence[0].play();
             if (i === i) {
                 sequence[i].onended = function() {
-                    sequence[i + 1].play();
-                };
-            }
+                    if(sequence[i + 1] === undefined || sequence[i + 1] === null) {
+                        return false;
+                    } else {
+                        return sequence[i + 1].play();
+                    }
+                }
+            } 
         }
     });
 
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    $('.clear').on('click', function(){
+        sequence.length = [];
+        $('.insert-here').empty()
+    })
 });
 
 
@@ -116,7 +90,6 @@ $(document).ready(function(){
 
 // TO DO
 // max seq length
-// enter key as click function
 // if sequence array = 0, replay function alert 'haven't played anything yet!'
 
 
