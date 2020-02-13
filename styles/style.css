@@ -276,7 +276,6 @@ p {
 }
 
 .recently-played p {
-  padding-top: 10px;
   margin-bottom: 0;
 }
 
@@ -430,7 +429,8 @@ body:not(.focus-outline) [tabindex]:focus {
           align-items: center;
 }
 
-.recently-played-section {
+.button-section {
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,12 +438,30 @@ body:not(.focus-outline) [tabindex]:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.recently-played-section {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+h4.last-played {
+  margin-top: 20px;
 }
 
 .insert-here {
@@ -457,10 +475,10 @@ body:not(.focus-outline) [tabindex]:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 20px;
+  margin: 20px 20px;
 }
 
-button.clear {
+button.yellow {
   text-transform: uppercase;
   font-size: 1.5rem;
   border: gold solid 2px;
@@ -470,21 +488,21 @@ button.clear {
   margin: 40px 0;
 }
 
-button.clear:focus {
+button.yellow:focus {
   -webkit-box-shadow: 8px 8px black;
           box-shadow: 8px 8px black;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
 
-button.clear:hover {
+button.yellow:hover {
   -webkit-box-shadow: 8px 8px black;
           box-shadow: 8px 8px black;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
 
-button.clear:active {
+button.yellow:active {
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transform: scale(0.9);
@@ -543,6 +561,12 @@ footer {
   .grid {
     width: 90%;
   }
+  button.yellow {
+    font-size: 1.1rem;
+    border: gold solid 1px;
+    padding: 15px 30px;
+    margin: 30px 0;
+  }
 }
 
 @media (max-width: 834px) {
@@ -576,6 +600,17 @@ footer {
     margin: 20px 0;
     padding-bottom: 5px;
   }
+  .recently-played-section {
+    width: 90%;
+  }
+  .button-section {
+    width: 90%;
+  }
+  button.yellow {
+    font-size: 1rem;
+    padding: 15px 20px;
+    margin: 20px 0;
+  }
   .footer-text {
     width: 80%;
     text-align: left;
@@ -584,7 +619,16 @@ footer {
 
 @media (max-width: 768px) and (max-width: 450px) {
   .wrapper {
-    width: 90%;
+    width: 95%;
+  }
+  .recently-played-section {
+    width: 99%;
+  }
+  .button-section {
+    width: 99%;
+  }
+  button.yellow {
+    font-size: 1rem;
   }
   h1 {
     font-size: 2.5rem;
@@ -595,6 +639,15 @@ footer {
 @media (max-width: 768px) and (max-width: 414px) {
   .wrapper {
     width: 99%;
+  }
+  .gallery-images {
+    width: 49%;
+  }
+  .button-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -611,7 +664,7 @@ footer {
   }
   i {
     font-size: 1.2rem;
-    margin: 0 8px;
+    margin: 0 1px;
   }
   .grid {
     width: 90%;
