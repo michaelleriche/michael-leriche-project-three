@@ -31,9 +31,9 @@ $(document).ready(function(){
             audioArray[i - 1].play();
             sequence.push(audioArray[i - 1]);
             const htmlToAppend = `<img src="assets/larry-crop-${i}.png" </img>`;
-            $('.insert-here').append(htmlToAppend);
+            $('.dynamic-images').append(htmlToAppend);
             if (sequence.length % 6 === 0) {
-                $('.insert-here').empty();
+                $('.dynamic-images').empty();
                 sequence = [];
             }
         });
@@ -67,7 +67,7 @@ $(document).ready(function(){
 
     $('.clear').on('click', function(){
         sequence.length = [];
-        $('.insert-here').empty()
+        $('.dynamic-images').empty()
     })
 });
 

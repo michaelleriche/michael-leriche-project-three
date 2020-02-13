@@ -98,7 +98,7 @@ body:not(.focus-outline) [tabindex]:focus {
 h4.last-played {
     margin-top: 20px;
 }
-.insert-here {
+.dynamic-images {
    display: flex;
    flex-direction: row;
    justify-content: center;
@@ -125,7 +125,7 @@ button.yellow:active {
     box-shadow: none;
     transform: scale(0.9);
 }
-.insert-here img {
+.dynamic-images img {
     width: 100%;
     min-width: 50px;
     max-width: 112px;
@@ -214,6 +214,12 @@ footer {
             padding: 15px 20px;
             margin: 20px 0;
         }    
+        .dynamic-images img {
+            width: 100%;
+            min-width: 30px;
+            max-width: 80px;
+            border: 3px solid gold;
+        }
         .footer-text {
             width: 80%;
             text-align: left;
@@ -237,6 +243,12 @@ footer {
             font-size: 2.5rem;
             line-height: 3rem;
         }
+        // .dynamic-images img {
+        //     width: 100%;
+        //     min-width: 30px;
+        //     max-width: 80px;
+        //     border: 3px solid gold;
+        // }
     }
 // iPHONE BIG
 

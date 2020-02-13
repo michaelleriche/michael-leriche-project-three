@@ -464,7 +464,7 @@ h4.last-played {
   margin-top: 20px;
 }
 
-.insert-here {
+.dynamic-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -509,7 +509,7 @@ button.yellow:active {
           transform: scale(0.9);
 }
 
-.insert-here img {
+.dynamic-images img {
   width: 100%;
   min-width: 50px;
   max-width: 112px;
@@ -610,6 +610,12 @@ footer {
     font-size: 1rem;
     padding: 15px 20px;
     margin: 20px 0;
+  }
+  .dynamic-images img {
+    width: 100%;
+    min-width: 30px;
+    max-width: 80px;
+    border: 3px solid gold;
   }
   .footer-text {
     width: 80%;
