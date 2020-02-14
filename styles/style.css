@@ -299,6 +299,10 @@ em {
   border-bottom: 1px solid gold;
 }
 
+.underline {
+  border-bottom: 2px solid black;
+}
+
 .header-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -588,6 +592,10 @@ footer {
   }
   .gallery-images {
     width: 30%;
+  }
+  .last-played,
+  .dynamic-images {
+    display: none;
   }
 }
 

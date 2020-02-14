@@ -136,6 +136,7 @@ footer {
     padding-bottom: 10px;
     background-color: black;
 }
+
 .footer-text {
     color: white;
     display: flex;
@@ -191,6 +192,10 @@ footer {
         .gallery-images {
             width: 30%;
         }
+        .last-played,
+        .dynamic-images {
+            display: none;
+        }
     }
 //                                        STANDARD IPAD
     @media(max-width: 768px) {
@@ -243,12 +248,6 @@ footer {
             font-size: 2.5rem;
             line-height: 3rem;
         }
-        // .dynamic-images img {
-        //     width: 100%;
-        //     min-width: 30px;
-        //     max-width: 80px;
-        //     border: 3px solid gold;
-        // }
     }
 // iPHONE BIG
 
