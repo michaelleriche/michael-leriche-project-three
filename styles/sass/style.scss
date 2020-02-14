@@ -170,6 +170,15 @@ footer {
         }
     }
 
+
+    //IPAD LANDSCAPE
+    @media(max-width: 1025px){
+        .last-played,
+        .dynamic-images {
+            display: none;
+        }
+    }
+
 //IPAD PRO
     @media (max-width: 834px) {
         
@@ -191,10 +200,6 @@ footer {
         }
         .gallery-images {
             width: 30%;
-        }
-        .last-played,
-        .dynamic-images {
-            display: none;
         }
     }
 //                                        STANDARD IPAD

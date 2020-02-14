@@ -573,6 +573,13 @@ footer {
   }
 }
 
+@media (max-width: 1025px) {
+  .last-played,
+  .dynamic-images {
+    display: none;
+  }
+}
+
 @media (max-width: 834px) {
   .header-text {
     height: 40vh;
@@ -592,10 +599,6 @@ footer {
   }
   .gallery-images {
     width: 30%;
-  }
-  .last-played,
-  .dynamic-images {
-    display: none;
   }
 }
 
