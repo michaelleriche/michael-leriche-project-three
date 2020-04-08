@@ -3,12 +3,15 @@ h2,
 h3,
 h4,
 button {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: $headerFont;
 }
 h1 {
     font-weight: bold;
-    font-size: 4rem;
-    line-height: 5rem;
+    font-size: 7vw;
+    letter-spacing: 0.1vw;
+    line-height: 10vw;
+    color: $secondaryColour;
+    text-shadow: 4px 4px black, 8px 8px $primaryColour;
 }
 h2 {
     font-size: 3rem;
@@ -20,26 +23,21 @@ h4 {
     font-size: 1.4rem;
     margin: 20px 0;
     padding-bottom: 5px;
-    border-bottom: 1px solid yellow;
-}
-a {
-    color: white;
+    border-bottom: 1px solid $secondaryColour;
 }
 i:hover {
-    color: gold;
-    text-shadow: white 0px 0px 0px;
+    color: $primaryColour;
     transition: all 0.4s;
     scale: 1.5;
 }
 p { 
-    font-family: 'Raleway', sans-serif;
+    font-family: $bodyFont;
     font-size: 1rem;
     line-height: 1.2rem;
     margin: 20px 0 40px 0;
 }
 .recently-played p {
-    // padding-top:10px;
-   margin-bottom: 0;
+    margin-bottom: 0;
 }
 .recently-played a,
 .other-functions a {
@@ -47,17 +45,21 @@ p {
     color: black;
 }
 h2.other-headers:hover {
-    text-shadow:gold 5px 5px 1px;
+    text-shadow:$primaryColour 5px 5px 1px;
     
 }
 .socials p {
     padding-bottom: 5px;
-    border-bottom: 1px solid gold;
+    border-bottom: 1px solid $primaryColour;
 }
 em {
     font-weight: 900;
-    border-bottom: 1px solid gold;
+    border-bottom: 1px solid $primaryColour;
 }
 .underline {
     border-bottom: 2px solid black;
+}
+.footer-text h4,
+.footer-text p {
+    color: white;
 }

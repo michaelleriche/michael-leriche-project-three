@@ -1,0 +1,30 @@
+@keyframes pulse {
+    0% {
+      opacity: 1;
+      transform: none;
+    }
+    50% {
+      opacity: .8;
+      color: white;
+      text-shadow: 0 10px $secondaryColour, 0px 20px $primaryColour;
+      transform: scale(.8);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes pulseHeart {
+    0% {
+      opacity: 1;
+      transform: none;
+    }
+    50% {
+      opacity: .8;
+      transform: scale(.8);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }

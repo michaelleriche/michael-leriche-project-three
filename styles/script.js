@@ -22,15 +22,20 @@ $(document).ready(function(){
         $audio[5], 
         $audio[6], 
         $audio[7], 
-        $audio[8]
+        $audio[8],
+        $audio[9],
+        $audio[10],
+        $audio[11],
+
+
     ];
     let sequence = [];
 
     for (let i = 1; i <= audioArray.length; i++) {
-        $(`.larry-${i}`).on('click', function(){
+        $(`.keanu-${i}`).on('click', function(){
             audioArray[i - 1].play();
             sequence.push(audioArray[i - 1]);
-            const htmlToAppend = `<img src="assets/larry-crop-${i}.png" </img>`;
+            const htmlToAppend = `<img src="assets/keanu-crop-${i}.png" </img>`;
             $('.dynamic-images').append(htmlToAppend);
             if (sequence.length % 6 === 0) {
                 $('.dynamic-images').empty();
@@ -47,8 +52,6 @@ $(document).ready(function(){
         random = Math.floor(Math.random() * 10);
         $audio[random].play();
     });
-
-// SO CLOSE // FOR SOME REASON IT CLEARS BUT PLAYS BACK FIRST CLIP
 
     $('.replay').on('click', function(){
         for (let i = 0; i < sequence.length; i++) {
@@ -70,8 +73,6 @@ $(document).ready(function(){
         $('.dynamic-images').empty()
     })
 });
-
-// accessibility - tab through hit enter on replay and randomize
 
 
 

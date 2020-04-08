@@ -2,49 +2,48 @@
 @import 'variables';
 @import 'fonts';
 @import 'header';
+@import 'animations';
 
-
-.gallery-images {
-    width: 33%;
+body {
+    background-color: $backgroundColour;
 }
 audio {
     display: none;
 }
 button {
-    background-color: white;
-    border: none;
-    border:white solid 2px;
+    background-color: $backgroundColour;
+    border:$backgroundColour solid 2px;
 }
 button:focus {
-    border:gold solid 2px;
+    border:$secondaryColour solid 2px;
 }
 img {
     width: 100%;
+    height: auto;
+}
+.gallery-images img {
+    box-shadow: 5px 5px $primaryColour;
     min-width: 100px;
     max-width: 225px;
-    height: auto;
     border-radius: 50%;
     border: 5px solid black;
 }
 i {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin:0 10px;
 }
 i:first-child{
     margin-left: 20px;
 }
 .grid {
-    width: 75%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
+    width: 80%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
 }
 img:hover {
     opacity: 0.9;
-    box-shadow: 13px 10px 15px 0px rgba(0,0,0,0.54);
 }
 .other-functions,
 .recently-played {
@@ -56,11 +55,16 @@ img:hover {
 .gallery-images, 
 .other-functions, 
 .recently-played {    
-    border:white solid 2px;
+    border: $backgroundColour solid 2px;
 } 
 .footer-text,
 .icon {
+    color: white;
     border: black solid 2px;
+}
+.gallery-images img:hover{
+    box-shadow: 5px 5px $secondaryColour, 10px 10px $primaryColour;
+
 }
 .header-text:focus, 
 .gallery-images:focus, 
@@ -68,10 +72,19 @@ img:hover {
 .recently-played:focus,
 .footer-text:focus,
 .icon:focus {    
-    border:gold solid 2px;
+    border:$secondaryColour solid 2px;
 } 
+.button-section button:focus,
+.button-section button:hover {
+    background-color: $secondaryColour;
+    border:$secondaryColour solid 2px;
+    color: white;
+    transition: 0.1s;
+    box-shadow: 8px 8px black;
+
+}
 body:not(.focus-outline) [tabindex]:focus {
-    border: white solid 2px;
+    border: $backgroundColour solid 2px;
     outline: none;
 }
 .other-functions {
@@ -107,19 +120,15 @@ h4.last-played {
 button.yellow {
     text-transform: uppercase;
     font-size: 1.5rem;
-    border: gold solid 2px;
+    border: $primaryColour solid 2px;
     border-radius: 5px;
-    background: gold;
+    background: $primaryColour;
     padding: 15px 40px;
     margin: 40px 0;
 }
 button.yellow:focus {
 box-shadow: 8px 8px black;
 transition: 0.1s;
-}
-button.yellow:hover {
-    box-shadow: 8px 8px black;
-    transition: 0.1s;
 }
 button.yellow:active {
     box-shadow: none;
@@ -129,16 +138,16 @@ button.yellow:active {
     width: 100%;
     min-width: 50px;
     max-width: 112px;
-    border: 3px solid gold;
+    border: 3px solid $secondaryColour;
+    border-radius: 50%;
 }
 footer {
     margin-top: 40px;
     padding-bottom: 10px;
     background-color: black;
 }
-
 .footer-text {
-    color: white;
+    color:black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,9 +163,23 @@ footer {
     justify-content: space-between;
     align-content: baseline;
 } 
+.fa-instagram {
+    color: #1DB954;
+}
+.fa-twitter {
+    color:#1DA1F2;
+}
+.fa-linkedin-in {
+    color: #0072b1;
+}
+.fa-envelope {
+    color: $secondaryColour;
+}
+.fa-github {
+    color: #f05d5e;
+}
 
 //                               MEDIA QUERIES 
-
     @media(max-width: 1200px) {
         
         .grid {
@@ -164,13 +187,15 @@ footer {
         }
         button.yellow {
             font-size: 1.1rem;
-            border: gold solid 1px;
+            border: $primaryColour solid 1px;
             padding: 15px 30px;
             margin: 30px 0;
         }
+        .fa-heart {
+            top:90px;
+            right:200px;
+        }
     }
-
-
     //IPAD LANDSCAPE
     @media(max-width: 1025px){
         .last-played,
@@ -178,12 +203,29 @@ footer {
             display: none;
         }
     }
-
 //IPAD PRO
     @media (max-width: 834px) {
-        
+        .wrapper {
+            width: 90%;
+        }
+        header {
+            height: 60vh;
+            width: 100%;
+        }
         .header-text {
-            height: 40vh;
+            position: relative;
+        }
+        .fa-heart {
+            top:50px;
+            right:150px;
+            font-size: 3rem;
+        }
+        .header-down-arrow {
+            display: none;
+        }
+        .header-text {
+            margin-top: 20px;
+            height: 60vh;
         }
         h1 {
             font-size: 3rem;
@@ -196,15 +238,17 @@ footer {
             font-size: 1.6rem;
         }
         .grid {
-            width: 90%;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-        .gallery-images {
-            width: 30%;
-        }
+        
     }
 //                                        STANDARD IPAD
     @media(max-width: 768px) {
-        
         h3 {
             font-size: 1.3rem;
         }
@@ -223,20 +267,33 @@ footer {
             font-size: 1rem;
             padding: 15px 20px;
             margin: 20px 0;
-        }    
+        }   
         .dynamic-images img {
             width: 100%;
             min-width: 30px;
             max-width: 80px;
-            border: 3px solid gold;
+            border: 3px solid $primaryColour;
         }
         .footer-text {
             width: 80%;
             text-align: left;
         }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     // GENERAL MOBILE
     @media (max-width:450px) {
-        
+        header {
+            height: 40vh;
+        }
+        .header-text {
+            height: 40vh;
+        }
+        .fa-heart {
+            top: 20px;
+            right: 100px;
+        }
         .wrapper {
             width: 95%;
         }
@@ -253,24 +310,38 @@ footer {
             font-size: 2.5rem;
             line-height: 3rem;
         }
+        .grid {
+            margin: 40px 0 0 0;
+            width: 100%;
+        }
     }
 // iPHONE BIG
 
-    @media(max-width: 414px) {
-        
+    @media(max-width: 414px) { 
         .wrapper {
             width: 99%;
         }
-        .gallery-images {
-            width: 49%;
-        }
+        .grid {
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+        }  
         .button-section {
             flex-direction: column;
         }
     }
 // iPHONE TINY GUY
-    @media(max-width: 320px) {
-        
+    @media(max-width: 320px) { 
+        header {
+            height: 50vh;
+        }
+        .header-text {
+            margin: 0;
+            height: 50vh;
+        }
+        .fa-heart {
+            top: 50px;
+            left: 200px;
+        }
         h1 {
             font-size: 2rem;
             line-height: 2.5rem;
@@ -285,9 +356,6 @@ footer {
             font-size: 1.2rem;
             margin:0 1px;
         }
-        .grid {
-            width: 90%;
-        }
-       
+        
     }
 }

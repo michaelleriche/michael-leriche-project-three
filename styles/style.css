@@ -232,13 +232,16 @@ h2,
 h3,
 h4,
 button {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: "Corben", cursive;
 }
 
 h1 {
   font-weight: bold;
-  font-size: 4rem;
-  line-height: 5rem;
+  font-size: 7vw;
+  letter-spacing: 0.1vw;
+  line-height: 10vw;
+  color: #8367c7;
+  text-shadow: 4px 4px black, 8px 8px #6bf178;
 }
 
 h2 {
@@ -253,23 +256,18 @@ h4 {
   font-size: 1.4rem;
   margin: 20px 0;
   padding-bottom: 5px;
-  border-bottom: 1px solid yellow;
-}
-
-a {
-  color: white;
+  border-bottom: 1px solid #8367c7;
 }
 
 i:hover {
-  color: gold;
-  text-shadow: white 0px 0px 0px;
+  color: #6bf178;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   scale: 1.5;
 }
 
 p {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1rem;
   line-height: 1.2rem;
   margin: 20px 0 40px 0;
@@ -286,21 +284,34 @@ p {
 }
 
 h2.other-headers:hover {
-  text-shadow: gold 5px 5px 1px;
+  text-shadow: #6bf178 5px 5px 1px;
 }
 
 .socials p {
   padding-bottom: 5px;
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid #6bf178;
 }
 
 em {
   font-weight: 900;
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid #6bf178;
 }
 
 .underline {
   border-bottom: 2px solid black;
+}
+
+.footer-text h4,
+.footer-text p {
+  color: white;
+}
+
+header {
+  background-image: url(../assets/header-keanu3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
 }
 
 .header-text {
@@ -311,19 +322,125 @@ em {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: space-evenly;
-      -ms-flex-align: space-evenly;
-          align-items: space-evenly;
-  height: 50vh;
-  text-align: center;
-  margin-bottom: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+  border-bottom: none;
+  height: 100vh;
+  position: relative;
 }
 
-.gallery-images {
-  width: 33%;
+.fa-heart {
+  color: #f05d5e;
+  position: absolute;
+  font-size: 5rem;
+  top: 50px;
+  right: 400px;
+  text-shadow: 4px 4px #6bf178, 8px 8px #8367c7;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation: pulseHeart 3s 0.1s ease-out infinite;
+          animation: pulseHeart 3s 0.1s ease-out infinite;
+}
+
+.header-down-arrow {
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  color: white;
+}
+
+.header-down-arrow i {
+  -webkit-animation: fade-slide-up 0.5s 0.5s ease-out forwards, pulse 2s 0.1s ease-out infinite;
+          animation: fade-slide-up 0.5s 0.5s ease-out forwards, pulse 2s 0.1s ease-out infinite;
+  opacity: 0;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    opacity: .8;
+    color: white;
+    text-shadow: 0 10px #8367c7, 0px 20px #6bf178;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    opacity: .8;
+    color: white;
+    text-shadow: 0 10px #8367c7, 0px 20px #6bf178;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes pulseHeart {
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    opacity: .8;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes pulseHeart {
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    opacity: .8;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+body {
+  background-color: #e6e8e6;
 }
 
 audio {
@@ -331,26 +448,30 @@ audio {
 }
 
 button {
-  background-color: white;
-  border: none;
-  border: white solid 2px;
+  background-color: #e6e8e6;
+  border: #e6e8e6 solid 2px;
 }
 
 button:focus {
-  border: gold solid 2px;
+  border: #8367c7 solid 2px;
 }
 
 img {
   width: 100%;
+  height: auto;
+}
+
+.gallery-images img {
+  -webkit-box-shadow: 5px 5px #6bf178;
+          box-shadow: 5px 5px #6bf178;
   min-width: 100px;
   max-width: 225px;
-  height: auto;
   border-radius: 50%;
   border: 5px solid black;
 }
 
 i {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 0 10px;
 }
 
@@ -359,25 +480,17 @@ i:first-child {
 }
 
 .grid {
-  width: 75%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  width: 80%;
+  margin: 100px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;
 }
 
 img:hover {
   opacity: 0.9;
-  -webkit-box-shadow: 13px 10px 15px 0px rgba(0, 0, 0, 0.54);
-          box-shadow: 13px 10px 15px 0px rgba(0, 0, 0, 0.54);
 }
 
 .other-functions,
@@ -397,12 +510,18 @@ img:hover {
 .gallery-images,
 .other-functions,
 .recently-played {
-  border: white solid 2px;
+  border: #e6e8e6 solid 2px;
 }
 
 .footer-text,
 .icon {
+  color: white;
   border: black solid 2px;
+}
+
+.gallery-images img:hover {
+  -webkit-box-shadow: 5px 5px #8367c7, 10px 10px #6bf178;
+          box-shadow: 5px 5px #8367c7, 10px 10px #6bf178;
 }
 
 .header-text:focus,
@@ -411,11 +530,22 @@ img:hover {
 .recently-played:focus,
 .footer-text:focus,
 .icon:focus {
-  border: gold solid 2px;
+  border: #8367c7 solid 2px;
+}
+
+.button-section button:focus,
+.button-section button:hover {
+  background-color: #8367c7;
+  border: #8367c7 solid 2px;
+  color: white;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-box-shadow: 8px 8px black;
+          box-shadow: 8px 8px black;
 }
 
 body:not(.focus-outline) [tabindex]:focus {
-  border: white solid 2px;
+  border: #e6e8e6 solid 2px;
   outline: none;
 }
 
@@ -485,21 +615,14 @@ h4.last-played {
 button.yellow {
   text-transform: uppercase;
   font-size: 1.5rem;
-  border: gold solid 2px;
+  border: #6bf178 solid 2px;
   border-radius: 5px;
-  background: gold;
+  background: #6bf178;
   padding: 15px 40px;
   margin: 40px 0;
 }
 
 button.yellow:focus {
-  -webkit-box-shadow: 8px 8px black;
-          box-shadow: 8px 8px black;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-}
-
-button.yellow:hover {
   -webkit-box-shadow: 8px 8px black;
           box-shadow: 8px 8px black;
   -webkit-transition: 0.1s;
@@ -517,7 +640,8 @@ button.yellow:active {
   width: 100%;
   min-width: 50px;
   max-width: 112px;
-  border: 3px solid gold;
+  border: 3px solid #8367c7;
+  border-radius: 50%;
 }
 
 footer {
@@ -527,7 +651,7 @@ footer {
 }
 
 .footer-text {
-  color: white;
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -561,15 +685,39 @@ footer {
       align-content: baseline;
 }
 
+.fa-instagram {
+  color: #1DB954;
+}
+
+.fa-twitter {
+  color: #1DA1F2;
+}
+
+.fa-linkedin-in {
+  color: #0072b1;
+}
+
+.fa-envelope {
+  color: #8367c7;
+}
+
+.fa-github {
+  color: #f05d5e;
+}
+
 @media (max-width: 1200px) {
   .grid {
     width: 90%;
   }
   button.yellow {
     font-size: 1.1rem;
-    border: gold solid 1px;
+    border: #6bf178 solid 1px;
     padding: 15px 30px;
     margin: 30px 0;
+  }
+  .fa-heart {
+    top: 90px;
+    right: 200px;
   }
 }
 
@@ -581,8 +729,27 @@ footer {
 }
 
 @media (max-width: 834px) {
+  .wrapper {
+    width: 90%;
+  }
+  header {
+    height: 60vh;
+    width: 100%;
+  }
   .header-text {
-    height: 40vh;
+    position: relative;
+  }
+  .fa-heart {
+    top: 50px;
+    right: 150px;
+    font-size: 3rem;
+  }
+  .header-down-arrow {
+    display: none;
+  }
+  .header-text {
+    margin-top: 20px;
+    height: 60vh;
   }
   h1 {
     font-size: 3rem;
@@ -595,10 +762,20 @@ footer {
     font-size: 1.6rem;
   }
   .grid {
-    width: 90%;
-  }
-  .gallery-images {
-    width: 30%;
+    width: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -626,15 +803,31 @@ footer {
     width: 100%;
     min-width: 30px;
     max-width: 80px;
-    border: 3px solid gold;
+    border: 3px solid #6bf178;
   }
   .footer-text {
     width: 80%;
     text-align: left;
   }
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 768px) and (max-width: 450px) {
+  header {
+    height: 40vh;
+  }
+  .header-text {
+    height: 40vh;
+  }
+  .fa-heart {
+    top: 20px;
+    right: 100px;
+  }
   .wrapper {
     width: 95%;
   }
@@ -651,14 +844,20 @@ footer {
     font-size: 2.5rem;
     line-height: 3rem;
   }
+  .grid {
+    margin: 40px 0 0 0;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) and (max-width: 414px) {
   .wrapper {
     width: 99%;
   }
-  .gallery-images {
-    width: 49%;
+  .grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    width: 100%;
   }
   .button-section {
     -webkit-box-orient: vertical;
@@ -669,6 +868,17 @@ footer {
 }
 
 @media (max-width: 768px) and (max-width: 320px) {
+  header {
+    height: 50vh;
+  }
+  .header-text {
+    margin: 0;
+    height: 50vh;
+  }
+  .fa-heart {
+    top: 50px;
+    left: 200px;
+  }
   h1 {
     font-size: 2rem;
     line-height: 2.5rem;
@@ -682,8 +892,5 @@ footer {
   i {
     font-size: 1.2rem;
     margin: 0 1px;
-  }
-  .grid {
-    width: 90%;
   }
 }
